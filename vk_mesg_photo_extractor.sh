@@ -17,6 +17,6 @@ for d in messages/*/ ; do
     parallel --gnu wget -P $d"voice" < $d"voice_clear.urls";
     done
 
-for filename in messages/*/img/ ; do 
+for filename in messages/*/img/* ; do 
     mv "$filename" "$(echo "$filename" | sed -e 's/\?size=.*//')";  
     done
